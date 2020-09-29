@@ -28,3 +28,5 @@ More information about OpenFin:
 - https://github.com/openfin -> OpenFin Github repo
 
 CodeSandbox Example can be found here: https://codesandbox.io/s/openfin-platform-custom-tabs-q31mz?file=/README.md
+
+You will need the OpenFin installed for the fins links (on the codesandbox page or directly https://q31mz.csb.app/ ) to work.
