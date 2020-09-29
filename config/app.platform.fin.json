@@ -7,10 +7,10 @@
   },
   "platform": {
     "uuid": "customtemplate-tabmanager-demo",
-    "applicationIcon": "https://dhlgj.csb.app/favicon.ico",
+    "applicationIcon": "https://q31mz.csb.app/favicon.ico",
     "autoShow": false,
     "defaultWindowOptions": {
-      "url": "https://dhlgj.csb.app/window-template.html",
+      "url": "https://q31mz.csb.app/window-template.html",
       "contextMenu": true,
       "backgroundColor": "#FFFFFF",
       "showBackgroundImages": true,
@@ -44,7 +44,7 @@
                   "type": "component",
                   "componentName": "view",
                   "componentState": {
-                    "url": "https://dhlgj.csb.app/"
+                    "url": "https://q31mz.csb.app/"
                   },
                   "isClosable": true,
                   "reorderEnabled": true,
@@ -54,7 +54,7 @@
                   "type": "component",
                   "componentName": "view",
                   "componentState": {
-                    "url": "https://dhlgj.csb.app/"
+                    "url": "https://q31mz.csb.app/"
                   },
                   "isClosable": true,
                   "reorderEnabled": true,

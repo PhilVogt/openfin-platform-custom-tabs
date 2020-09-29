@@ -7,7 +7,7 @@
   },
   "platform": {
     "uuid": "preload-tabmanager-demo",
-    "applicationIcon": "https://dhlgj.csb.app/favicon.ico",
+    "applicationIcon": "https://q31mz.csb.app/favicon.ico",
     "autoShow": false,
     "defaultWindowOptions": {
       "contextMenu": true,
@@ -19,10 +19,10 @@
       "saveWindowState": false,
       "preloadScripts": [
         {
-          "url": "https://dhlgj.csb.app/js/demo-component.js"
+          "url": "https://q31mz.csb.app/js/demo-component.js"
         },
         {
-          "url": "https://dhlgj.csb.app/js/preload.js"
+          "url": "https://q31mz.csb.app/js/preload.js"
         }
       ]
     }
@@ -50,7 +50,7 @@
                   "type": "component",
                   "componentName": "view",
                   "componentState": {
-                    "url": "https://dhlgj.csb.app/"
+                    "url": "https://q31mz.csb.app/"
                   },
                   "isClosable": true,
                   "reorderEnabled": true,
@@ -60,7 +60,7 @@
                   "type": "component",
                   "componentName": "view",
                   "componentState": {
-                    "url": "https://dhlgj.csb.app/"
+                    "url": "https://q31mz.csb.app/"
                   },
                   "isClosable": true,
                   "reorderEnabled": true,

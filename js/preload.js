@@ -3,7 +3,7 @@ if (window !== window.top) {
 }
 console.log("TabManager Preload example loaded.");
 
-import("https://dhlgj.csb.app/js/tab-manager.js")
+import("https://q31mz.csb.app/js/tab-manager.js")
   .then(async (tabManager) => {
     await tabManager.init({
       layoutId: "layout-container",

@@ -1,7 +1,7 @@
 {
-  "name": "openfin-template",
+  "name": "openfin-platform-custom-tabs",
   "version": "1.0.0",
-  "description": "Openfin template",
+  "description": "Gives a basic example of how you could customise the tabs of an OpenFin Platform API application",
   "main": "index.html",
   "scripts": {
     "start": "serve"
