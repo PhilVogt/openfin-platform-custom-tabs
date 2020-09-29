@@ -21,6 +21,20 @@ Things to note:
 - The tab manager file tries to take into account initial loads from snapshots as well as tab drags and presets (grid, row etc) being applied.
 - You pass the tab manager init function an array of strings (for left or right components) which represent the names of webcomponents you have defined (this would be loaded into the page through the template or preload scripts).
 - Something to note is that the tab is destroyed and recreated when you move it around so your webcomponents should take that into account.
+- both the preload script and the custom window template end up doing something like:
+
+```javascript
+import { init } from "./tab-manager.js";
+
+// start of your function or wrap it in (async function () {
+await init({
+  layoutId: "layout-container",
+  hideTitle: false,
+  leftComponents: ["channel-indicator"],
+  rightComponents: ["channel-indicator"]
+});
+// end of your function or execute the wrapper: })();
+```
 
 More information about OpenFin:
 
