@@ -1,3 +1,27 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.serviceList {
+	margin: 0px -40px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.seriviceItem {
+	padding: 5px;
+	margin: 2px;
+}
+
+.serviceItemConnected {
+	color: #08dc2c;
+	border: solid #08dc2c 1px;
+	border-radius: 5px;
+}
+
+.serviceItemDisconnected {
+	color: rgb(223, 12, 12);
+	border: solid rgb(223, 12, 12) 1px;
+	border-radius: 5px;
 }

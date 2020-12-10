@@ -17,7 +17,7 @@ if (customElements !== undefined) {
 
       if (
         (isFin || isFins) &&
-        (href.indexOf(".") === 7 || href.indexOf(".") === 8)
+        (href.indexOf(".") === 6 || href.indexOf(".") === 7)
       ) {
         href = href.replace(
           ".",
@@ -25,11 +25,11 @@ if (customElements !== undefined) {
             (window.location.port ? ":" + window.location.port : "")
         );
 
-        if (isFin && window.location.protocol === "https") {
+        if (isFin && window.location.protocol === "https:") {
           href = href.replace("fin:", "fins:");
         }
 
-        if (isFins && window.location.protocol === "http") {
+        if (isFins && window.location.protocol === "http:") {
           href = href.replace("fins:", "fin:");
         }
       }
@@ -59,6 +59,7 @@ if (customElements !== undefined) {
         });
       }
     }
+
     static get observedAttributes() {
       return ["href"];
     }

@@ -1,0 +1,13 @@
+@import "frame-styles.css";
+
+.last-tab-button {
+	visibility: hidden;
+}
+
+#buttons-wrapper i {
+	opacity: 0.8;
+}
+
+#buttons-wrapper i:hover {
+	opacity: 1;
+}

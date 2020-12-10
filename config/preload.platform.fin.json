@@ -1,76 +1,80 @@
 {
-  "devtools_port": 9090,
-  "licenseKey": "request-a-key",
-  "runtime": {
-    "arguments": "--v=1 --inspect",
-    "version": "stable"
-  },
-  "platform": {
-    "uuid": "preload-tabmanager-demo",
-    "applicationIcon": "https://q31mz.csb.app/favicon.ico",
-    "autoShow": false,
-    "defaultWindowOptions": {
-      "contextMenu": true,
-      "backgroundColor": "#FFFFFF",
-      "showBackgroundImages": true,
-      "defaultWidth": 675,
-      "defaultHeight": 600,
-      "minHeight": 100,
-      "saveWindowState": false,
-      "preloadScripts": [
-        {
-          "url": "https://q31mz.csb.app/js/demo-component.js"
-        },
-        {
-          "url": "https://q31mz.csb.app/js/preload.js"
-        }
-      ]
-    }
-  },
-  "snapshot": {
-    "windows": [
-      {
-        "defaultWidth": 800,
-        "defaultHeight": 600,
-        "defaultLeft": 0,
-        "defaultTop": 0,
-        "saveWindowState": false,
-        "backgroundThrottling": true,
-        "layout": {
-          "content": [
-            {
-              "type": "stack",
-              "width": 100,
-              "isClosable": true,
-              "reorderEnabled": true,
-              "title": "",
-              "activeItemIndex": 0,
-              "content": [
-                {
-                  "type": "component",
-                  "componentName": "view",
-                  "componentState": {
-                    "url": "https://q31mz.csb.app/"
-                  },
-                  "isClosable": true,
-                  "reorderEnabled": true,
-                  "title": "view"
-                },
-                {
-                  "type": "component",
-                  "componentName": "view",
-                  "componentState": {
-                    "url": "https://q31mz.csb.app/"
-                  },
-                  "isClosable": true,
-                  "reorderEnabled": true,
-                  "title": "view2"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  }
+	"devtools_port": 9090,
+	"licenseKey": "request-a-key",
+	"runtime": {
+		"arguments": "--v=1 --inspect",
+		"version": "stable"
+	},
+	"platform": {
+		"uuid": "preload-tabmanager-demo",
+		"applicationIcon": "http://localhost:5000/favicon.ico",
+		"autoShow": false,
+		"defaultWindowOptions": {
+			"url": "http://localhost:5000/windows/window-template.html",
+			"contextMenu": true,
+			"backgroundColor": "#FFFFFF",
+			"showBackgroundImages": true,
+			"defaultWidth": 675,
+			"defaultHeight": 600,
+			"minHeight": 100,
+			"saveWindowState": false,
+			"preloadScripts": [
+				{
+					"url": "http://localhost:5000/js/demo-component.js"
+				},
+				{
+					"url": "http://localhost:5000/js/edit-header-component.js"
+				},
+				{
+					"url": "http://localhost:5000/js/preload.js"
+				}
+			]
+		}
+	},
+	"snapshot": {
+		"windows": [
+			{
+				"defaultWidth": 800,
+				"defaultHeight": 600,
+				"defaultLeft": 0,
+				"defaultTop": 0,
+				"saveWindowState": false,
+				"backgroundThrottling": true,
+				"layout": {
+					"content": [
+						{
+							"type": "stack",
+							"width": 100,
+							"isClosable": true,
+							"reorderEnabled": true,
+							"title": "",
+							"activeItemIndex": 0,
+							"content": [
+								{
+									"type": "component",
+									"componentName": "view",
+									"componentState": {
+										"url": "http://localhost:5000/"
+									},
+									"isClosable": true,
+									"reorderEnabled": true,
+									"title": "view"
+								},
+								{
+									"type": "component",
+									"componentName": "view",
+									"componentState": {
+										"url": "http://localhost:5000/"
+									},
+									"isClosable": true,
+									"reorderEnabled": true,
+									"title": "view2"
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
 }
