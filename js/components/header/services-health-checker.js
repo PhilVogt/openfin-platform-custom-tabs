@@ -53,7 +53,7 @@ class ServicesHealthCheckerComponent extends HTMLElement {
 		const serviceHealthChecker = html`
 			<i
 				class="fas fa-plug"
-				title="Change Instrument"
+				title="View Services"
 				@click=${() => this.launchServiceCheckerWindow().catch(console.error)}
 			></i>
 		`;

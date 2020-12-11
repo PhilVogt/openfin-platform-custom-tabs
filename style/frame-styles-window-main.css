@@ -11,3 +11,9 @@
 #buttons-wrapper i:hover {
 	opacity: 1;
 }
+
+.services-overview {
+	display: inline-block;
+	transform: rotate(140deg);
+	margin-right: 20px;
+}

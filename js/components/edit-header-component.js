@@ -1,6 +1,10 @@
+import { getChannelClient } from "../actions-channel-client.js";
+
 class EditHeaderComponent extends HTMLElement {
 	constructor() {
 		super();
+		this.dispatchEditAction = this.dispatchEditAction.bind(this);
+		this.subscribeToChildClient = this.subscribeToChildClient.bind(this);
 	}
 
 	set viewName(value) {
@@ -11,21 +15,23 @@ class EditHeaderComponent extends HTMLElement {
 		return this.getAttribute("viewName");
 	}
 
-	set margin(margins) {
-		if (margins !== undefined && margins.right !== undefined) {
-			this.style.marginRight = margins.right;
-			this.style.transform = "rotate(20deg)";
-		}
+	dispatchEditAction(event) {
+		this.channelClient.dispatch("UpdateTitleAction");
+	}
+
+	subscribeToChildClient() {
+		console.log("Attempting to subscribe to child client with name " + this.viewName);
+		getChannelClient(this.viewName)
+			.then((client) => {
+				this.channelClient = client;
+			})
+			.catch((e) => console.log(e));
 	}
 
 	connectedCallback() {
-		this.innerHTML = "&#x270f";
-		this.color = "orange";
-		this.margin = { right: "20px" };
-
-		this.onclick = (ev) => {
-			console.log(`edit header clicked`);
-		};
+		this.subscribeToChildClient();
+		this.innerHTML = "<div class='services-overview'>&#x270f</div>";
+		this.onclick = this.dispatchEditAction;
 	}
 
 	disconnectedCallback() {}

@@ -28,10 +28,10 @@ import { init } from "./tab-manager.js";
 
 // start of your function or wrap it in (async function () {
 await init({
-  layoutId: "layout-container",
-  hideTitle: false,
-  leftComponents: ["channel-indicator"],
-  rightComponents: ["channel-indicator"]
+	layoutId: "layout-container",
+	hideTitle: false,
+	leftComponents: ["channel-indicator"],
+	rightComponents: ["edit-header-component"],
 });
 // end of your function or execute the wrapper: })();
 ```

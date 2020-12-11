@@ -54,7 +54,7 @@
 									"type": "component",
 									"componentName": "view",
 									"componentState": {
-										"url": "http://localhost:5000/"
+										"url": "http://localhost:5000/views/child-view.html"
 									},
 									"isClosable": true,
 									"reorderEnabled": true,
@@ -64,7 +64,7 @@
 									"type": "component",
 									"componentName": "view",
 									"componentState": {
-										"url": "http://localhost:5000/"
+										"url": "http://localhost:5000/views/child-view.html"
 									},
 									"isClosable": true,
 									"reorderEnabled": true,
