@@ -1,6 +1,6 @@
 # Tab Header and Non-clipping window example
 
-## H2 Things of note;
+## Things of note;
 
 - This is a demo and not production code. It is to give you an idea on how to achieve some customisation of the OpenFin Platform API tabs.
 
@@ -33,7 +33,7 @@ await init({
 document.title = "Something new";
 ```
 
-## H2 To get this demo working
+## To get this demo working
 
 1. run `npm install` in the root directory.
 2. Then run `npm start`
