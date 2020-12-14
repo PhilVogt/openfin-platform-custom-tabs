@@ -1,16 +1,16 @@
 # Tab Header and Non-clipping window example
 
 - This is a demo and not production code. It is to give you an idea on how to achieve some customisation of the OpenFin Platform API tabs.
-- Highlights
-  -- The tab-manager file exports an init function which you can use to configure the controls you wish to load into the tab (left or right side), whether or not you wish to show the title (if you hide it then I suggest one of the custom controls shows a title of some sort) and what the id of the div the Platform API is binding to (when you specify a custom template then you need to provide the id of the div which the platform api should bind to -> js/layout-container-binding.js)
 
-  The tab manager file tries to take into account initial loads from snapshots as well as tab drags and presets (grid, row etc) being applied.
+- The tab-manager file exports an init function which you can use to configure the controls you wish to load into the tab (left or right side), whether or not you wish to show the title (if you hide it then I suggest one of the custom controls shows a title of some sort) and what the id of the div the Platform API is binding to (when you specify a custom template then you need to provide the id of the div which the platform api should bind to -> js/layout-container-binding.js)
 
-  You pass the tab manager init function an array of strings (for left or right components) which represent the names of webcomponents you have defined (this would be loaded into the page through the template or preload scripts).
+- The tab manager file tries to take into account initial loads from snapshots as well as tab drags and presets (grid, row etc) being applied.
 
-  Something to note is that the tab is destroyed and recreated when you move it around so your webcomponents should take that into account.
+- You pass the tab manager init function an array of strings (for left or right components) which represent the names of webcomponents you have defined (this would be loaded into the page through the template or preload scripts).
 
-  Here's an example of the tab-manager loading a "channel-indicator" and an "edit-header-component". The channel-indicator doesnt do anythng special, but could be used in a color coded fashion if you wanted to show some kind of status. The edit-header-component is the component which is responsible for trying to send "UpdateTitleAction" requests to the child view (see below).
+- Something to note is that the tab is destroyed and recreated when you move it around so your webcomponents should take that into account.
+
+- Here's an example of the tab-manager loading a "channel-indicator" and an "edit-header-component". The channel-indicator doesnt do anythng special, but could be used in a color coded fashion if you wanted to show some kind of status. The edit-header-component is the component which is responsible for trying to send "UpdateTitleAction" requests to the child view (see below).
 
 ```javascript
 import { init } from "./tab-manager.js";
@@ -25,7 +25,7 @@ await init({
 // end of your function or execute the wrapper: })();
 ```
 
--- The "actions-channel-client.js" and the "actions-channel-client.js" files show the basic channel communication that allows the view to react to button presses comming from the edit-header-component. Currently the child view registers the "UpdateTitleAction" and when called, it simply changes the title of the document (which is what drives the tab string.)
+- The "actions-channel-client.js" and the "actions-channel-client.js" files show the basic channel communication that allows the view to react to button presses comming from the edit-header-component. Currently the child view registers the "UpdateTitleAction" and when called, it simply changes the title of the document (which is what drives the tab string.)
 
 ```javascript
 document.title = "Something new";
