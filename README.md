@@ -1,5 +1,7 @@
 # Tab Header and Non-clipping window example
 
+## H2 Things of note;
+
 - This is a demo and not production code. It is to give you an idea on how to achieve some customisation of the OpenFin Platform API tabs.
 
 - The tab-manager file exports an init function which you can use to configure the controls you wish to load into the tab (left or right side), whether or not you wish to show the title (if you hide it then I suggest one of the custom controls shows a title of some sort) and what the id of the div the Platform API is binding to (when you specify a custom template then you need to provide the id of the div which the platform api should bind to -> js/layout-container-binding.js)
@@ -31,7 +33,7 @@ await init({
 document.title = "Something new";
 ```
 
-H1 To get this demo working
+## H2 To get this demo working
 
 1. run `npm install` in the root directory.
 2. Then run `npm start`
