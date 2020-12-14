@@ -30,3 +30,10 @@ await init({
 ```javascript
 document.title = "Something new";
 ```
+
+H1 To get this demo working
+
+1. run `npm install` in the root directory.
+2. Then run `npm start`
+3. All going well, you should be able to launch a browser here -> http://localhost:5000.
+4. The 2 hyper links show the way that this code can be injected/run, either via a pre-load script, or via a "custom page" (we called ours "window-template.html").
