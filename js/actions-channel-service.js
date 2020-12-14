@@ -1,10 +1,10 @@
 export async function init() {
 	// entity creates a channel and becomes the channelProvider
-	const providerBus = await fin.InterApplicationBus.Channel.create(
+	const headerActionsProviderBus = await fin.InterApplicationBus.Channel.create(
 		"header-actions_" + fin.me.identity.name
 	);
 
-	providerBus.onConnection((identity, payload) => {
+	headerActionsProviderBus.onConnection((identity, payload) => {
 		// can reject a connection here by throwing an error
 		console.log("Actions Channel: Client connection request identity: ", JSON.stringify(identity));
 		console.log("Actions Channel: Client connection request payload: ", JSON.stringify(payload));
@@ -15,7 +15,7 @@ export async function init() {
 		}
 	});
 
-	providerBus.register("UpdateTitleAction", async (payload, identity) => {
+	headerActionsProviderBus.register("UpdateTitleAction", async (payload, identity) => {
 		console.log(
 			"Actions Channel: Execute Action: Requested by client: " + JSON.stringify(identity)
 		);
@@ -30,5 +30,6 @@ export async function init() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+	console.log("Initialising channel.");
 	await init();
 });
