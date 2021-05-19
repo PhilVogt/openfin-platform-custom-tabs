@@ -7,11 +7,12 @@ class ServicesHealthCheckerComponent extends HTMLElement {
 		this.render();
 	}
 
-	async launchServiceCheckerWindow() {
-		let defaultLeft = window.screenX + window.outerWidth / 2;
-		let defaultTop = window.screenY + 30;
+	async launchServiceCheckerWindow({ screenX, screenY }) {
 		let height = 91;
 		let width = 385;
+		let defaultLeft = screenX - width;
+		let defaultTop = screenY + 13;
+
 
 		const winOption = {
 			name: "service-checker",
@@ -34,7 +35,7 @@ class ServicesHealthCheckerComponent extends HTMLElement {
 			// Here you can react to any data passed back from the child window
 			console.log(
 				"Data passed back from Service Checker Popup " +
-					JSON.stringify(yourDataPassedBackFromChildWindow)
+				JSON.stringify(yourDataPassedBackFromChildWindow)
 			);
 		};
 
@@ -54,7 +55,7 @@ class ServicesHealthCheckerComponent extends HTMLElement {
 			<i
 				class="fas fa-plug"
 				title="View Services"
-				@click=${() => this.launchServiceCheckerWindow().catch(console.error)}
+				@click=${(evt) => this.launchServiceCheckerWindow(evt).catch(console.error)}
 			></i>
 		`;
 		return render(serviceHealthChecker, this);
